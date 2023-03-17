@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 
 public class Login_StepDefinitions {
 
@@ -27,8 +28,10 @@ public class Login_StepDefinitions {
 
     }
 
+
     @Then("the user is on the Quick Launchpad")
-    public void the_user_is_on_the_quick_launchpad() {
+    public void the_user_is_on_the_quick_launchpad() throws InterruptedException {
+        Thread.sleep(2000);
         String expectedText= "Quick Launchpad";
         String actualText= quickLP.quickLaunchpad.getText();
         Assert.assertEquals(expectedText,actualText);
