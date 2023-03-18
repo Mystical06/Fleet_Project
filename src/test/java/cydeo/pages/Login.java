@@ -24,6 +24,9 @@ public class Login {
     @FindBy(xpath = "//a[class='dropdown-toggle']")
     public WebElement displayedUserName;
 
+    @FindBy(xpath = "//*[@id=\"login-form\"]/fieldset/div[1]/div")
+    public WebElement invalidUNorPW;
+
 
 
 
