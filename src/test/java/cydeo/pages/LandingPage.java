@@ -22,6 +22,8 @@ public class LandingPage extends BasePage{
 
 
 
+    @FindBy(xpath = "//a[@class='no-hash']")
+    public WebElement logoutButton;
 
 
 

@@ -129,6 +129,7 @@ public class Login_StepDefinitions {
         String expectedProfileName= ConfigurationReader.getProperty("storemanager.username");
         String actualProfileName= landingPage.userProfile.getAttribute("text").trim();
         Assert.assertEquals(expectedProfileName,actualProfileName);
+
     }
 
 

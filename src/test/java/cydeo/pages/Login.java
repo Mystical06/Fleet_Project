@@ -27,6 +27,8 @@ public class Login {
     @FindBy(xpath = "//*[@id=\"login-form\"]/fieldset/div[1]/div")
     public WebElement invalidUNorPW;
 
+    @FindBy(xpath = "//h2")
+    public WebElement loginPage;
 
 
 
@@ -42,5 +44,6 @@ public class Login {
 
 
 
-    }
+
+}
 
