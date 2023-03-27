@@ -89,7 +89,7 @@ public class Login_StepDefinitions {
 
 
     }
-    @Then("the user sees 'Please fill out this field' warning message")
+    @Then("the user sees 'Please fill in this field' warning message")
     public void the_user_sees_warning_message() {
         String expectedMessage= "Please fill in this field.";
         String actualMessage= login.inputUsername.getAttribute("validationMessage");
@@ -100,14 +100,14 @@ public class Login_StepDefinitions {
     public void the_user_leaves_both_username_and_password_fields_empty_and_clicks_on_login_button() {
         login.logInButton.click();
     }
-    @Then("the user sees 'Please fill out this field' warning message only in the username field")
+    @Then("the user sees 'Please fill in this field' warning message only in the username field")
     public void the_user_sees_warning_message_only_in_the_username_field()  {
         String expectedMessage2= "Please fill in this field.";
         String actualMessage2= login.inputUsername.getAttribute("validationMessage");
         Assert.assertEquals(expectedMessage2,actualMessage2);
     }
 
-    @Then("the user sees their own username in the profile menu")
+    @Then("the driver sees their own username in the profile menu")
     public void the_user_sees_their_own_username_in_the_profile_menu() throws InterruptedException {
         Thread.sleep(3000);
         String expectedProfileName= ConfigurationReader.getProperty("driver.username");
